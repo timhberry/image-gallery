@@ -38,8 +38,8 @@ def display(imagename):
     bucket = storage_client.bucket(BUCKET_NAME)
     blob = bucket.blob(imagename)
     with tempfile.NamedTemporaryFile() as temp:
-            blob.download_to_filename(temp.name)
-            return send_file(temp.name, attachment_filename=imagename)
+        blob.download_to_filename(temp.name)
+        return send_file(temp.name, attachment_filename=imagename)
 
 
 if __name__ == '__main__':
