@@ -18,7 +18,6 @@ app = Flask(__name__)
 def index():
     """Display the single page app"""
     images = [f.name for f in storage_client.list_blobs(BUCKET_NAME)]
-    print(images)
     return render_template('index.html', images=images)
 
 

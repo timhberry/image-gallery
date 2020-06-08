@@ -15,7 +15,6 @@ def index():
     """Display the single page app"""
     images = [f for f in os.listdir(UPLOAD_DIR) if os.path.isfile(
         os.path.join(UPLOAD_DIR, f))]
-    print(images)
     return render_template('index.html', images=images)
 
 
