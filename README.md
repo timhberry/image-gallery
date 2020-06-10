@@ -10,4 +10,6 @@ The original app in `1-local-storage` relies on writing to a local filesystem. T
 
 The refactored app in `2-cloud-storage` uses GCS for object storage. Now the app itself is stateless and can run anywhere and in any configuration (containerised, auto-scaled etc.).
 
+The version in `3-firestore` adds support for storing image metadata in Cloud Firestore.
+
 **Note:** For the sake of clarity there is no exception handling in this code. It is for demonstration purposes only. Use it at your own risk!
