@@ -1,14 +1,9 @@
-import os
 import tempfile
 
 from flask import Flask, request, render_template, redirect, url_for, send_file
 from google.cloud import storage, firestore
 
 BUCKET_NAME = "<YOUR-BUCKET-NAME>"
-ROOT_DIR = os.path.dirname(__file__)
-UPLOAD_DIR = os.path.join(ROOT_DIR, 'static/uploads')
-if not os.path.exists(UPLOAD_DIR):
-    os.makedirs(UPLOAD_DIR)
 
 storage_client = storage.Client()
 firestore_client = firestore.Client()
