@@ -12,4 +12,6 @@ The refactored app in `2-cloud-storage` uses GCS for object storage. Now the app
 
 The version in `3-firestore` adds support for storing image metadata in Cloud Firestore.
 
+The version in `4-secrets` is a demonstration of using sensitive data (in this case, an API key) in Cloud Run. The app expects an `API_KEY` variable. This can be injected into the runtime environment either manually with `gcloud deploy run` or via Cloud Build.
+
 **Note:** For the sake of clarity there is no exception handling in this code. It is for demonstration purposes only. Use it at your own risk!
