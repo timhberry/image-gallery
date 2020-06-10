@@ -39,7 +39,6 @@ def upload():
         new_upload_ref = firestore_client.collection(u'uploads').document()
         new_upload_ref.set({
             'filename': image.filename,
-            'title': request.form['title'],
             'description': request.form['description']
         })
     return redirect(url_for('index'))
