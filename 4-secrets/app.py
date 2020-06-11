@@ -22,6 +22,7 @@ def getquote():
     quotes = [q['body'] for q in r.json()['quotes']]
     return random.choice(quotes)
 
+
 @app.route('/')
 def index():
     """Display the single page app"""
