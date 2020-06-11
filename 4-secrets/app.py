@@ -30,7 +30,6 @@ def index():
     uploads = uploads_ref.stream()
     for upload in uploads:
         images.append(upload.to_dict())
-    qotd = "Placeholder QOTD"
     return render_template('index.html', images=images, qotd=getquote())
 
 
